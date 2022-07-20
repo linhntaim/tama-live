@@ -1,0 +1,34 @@
+{
+    "name": "tama-live",
+    "version": "1.0.0",
+    "description": "A hub for real-time cryptocurrency data",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "babel src --out-dir ./dist --delete-dir-on-start --minified --source-maps",
+        "test": "nyc mocha --require @babel/register",
+        "coverage": "nyc report --reporter=text-lcov | coveralls"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/linhntaim/tama-live.git"
+    },
+    "author": "Nguyen Tuan Linh <contact@linhntaim.com> (https://linhntaim.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/linhntaim/tama-live/issues"
+    },
+    "homepage": "https://github.com/linhntaim/tama-live#readme",
+    "dependencies": {
+        "socket.io": "^4.5.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.18.9",
+        "@babel/core": "^7.18.9",
+        "@babel/preset-env": "^7.18.9",
+        "@babel/register": "^7.18.9",
+        "chai": "^4.3.6",
+        "coveralls": "^3.1.1",
+        "mocha": "^10.0.0",
+        "nyc": "^15.1.0"
+    }
+}
