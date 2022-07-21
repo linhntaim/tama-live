@@ -1,11 +1,4 @@
-import {Server} from 'socket.io'
+import {SocketServer} from './socket-server'
+import config from './config'
 
-const io = new Server(process.env.PORT || 3001, {
-    // options
-})
-
-io.on('connection', (socket) => {
-    console.log('connected')
-})
-
-io.listen(3000)
+new SocketServer(config).start('PORT' in process.env ? parseInt(process.env.PORT) : 3000)
